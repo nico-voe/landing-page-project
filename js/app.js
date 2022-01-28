@@ -78,7 +78,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     document.querySelector(this.getAttribute("href")).scrollIntoView({
       behavior: "smooth",
     });
-    console.log("- this", this);
   });
 });
 
@@ -92,4 +91,14 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 // Scroll to section on link click
 
-// Set sections as active
+// Hide navbar when scrolling
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar__list").style.display = "block";
+  } else {
+    document.getElementById("navbar__list").style.display = "none";
+  }
+  prevScrollpos = currentScrollPos;
+};
