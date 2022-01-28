@@ -1,13 +1,9 @@
 # Landing Page Project
 
-## Table of Contents
-
-* [Instructions](#instructions)
-
 ## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+1. The navigation menu is dynamically build. In testing, one more sections was added to check if the navigation menu expands automatically.
+2. A click on a section in the navigation bar triggers soft scroll to anchor ID using scrollTO event.
+3. A section that is in the viewport is highlighted by a different color.
+4. Current section in the navigation bar is also highlighted
+5. The NavBar hides when scrolling down
