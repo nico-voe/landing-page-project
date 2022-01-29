@@ -13,9 +13,6 @@
 }
 
 .active {
-  -moz-box-shadow: 0 0 20px #ccc;
-  -webkit-box-shadow: 0 0 20px #ccc;
-  box-shadow: 0 0 20px #ccc;
 }
 /* ---- Base Rules ---- */
 body {
@@ -221,6 +218,9 @@ section.your-active-class {
     rgba(0, 0, 0, 0.1) 0%,
     rgba(0, 0, 0, 0) 100%
   );
+  -moz-box-shadow: 0 0 20px #ccc;
+  -webkit-box-shadow: 0 0 20px #ccc;
+  box-shadow: 0 0 20px #ccc;
 }
 
 section.your-active-class .landing__container::before {

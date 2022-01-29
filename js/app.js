@@ -61,10 +61,10 @@ window.addEventListener("scroll", function () {
     const activeLink = element.getBoundingClientRect();
     let activeLink2 = navBar.querySelector(`[data-nav=${element.id}]`);
     if (activeLink.top <= 50 && activeLink.bottom >= 50) {
-      element.classList.add("active");
+      element.classList.add("your-active-class");
       activeLink2.classList.add("active-link");
     } else {
-      element.classList.remove("active");
+      element.classList.remove("your-active-class");
       activeLink2.classList.remove("active-link");
     }
   });
