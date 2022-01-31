@@ -75,12 +75,17 @@ window.addEventListener("scroll", function () {
 
 // Scroll to anchor ID using scrollTO event
 
+//selects a elements with href attributes
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  //adds event listener to above selected elements
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
+
+    //scrolls to clicked a element which is selected above
     document.querySelector(this.getAttribute("href")).scrollIntoView({
       behavior: "smooth",
     });
+    console.log("- this", this);
   });
 });
 
