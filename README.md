@@ -1,5 +1,9 @@
 # Landing Page Project
 
+## Description
+
+This is a basic landing page that uses Javascript to create a NavBar dynamically and to highlight sections when scrolled. The project uses HTML, CSS, and Javascript.
+
 ## Instructions
 
 1. The navigation menu is dynamically build. In testing, one more sections was added to check if the navigation menu expands automatically.
