@@ -27,12 +27,6 @@ let navBar = document.querySelector("#navbar__list");
 const section = document.querySelectorAll("section");
 /**
  * End Global Variables
- * Start Helper Functions
- *
- */
-
-/**
- * End Helper Functions
  * Begin Main Functions
  *
  */
@@ -40,26 +34,35 @@ const section = document.querySelectorAll("section");
 // build the nav
 
 sections.forEach((element, index) => {
+  //creating Nav Links
   const li = document.createElement("li");
   const a = document.createElement("a");
+
+  //getting Section Name to later pass as Nav Name
   const navName = section[index].getAttribute("data-nav");
   const sectionId = element.id;
 
+  //create Nav Link Name & href connection to section
   a.classList.add("menu__link");
   a.setAttribute("href", `#${sectionId}`);
   a.setAttribute("data-nav", `${sectionId}`);
-
   a.innerText = navName;
+
+  //pass Li Element (Nav Link) into Ul in html
   li.appendChild(a);
   navBar.appendChild(li);
   console.log("- navBar", navBar);
 });
 
 // Add class 'active' to section when near top of viewport
+
 window.addEventListener("scroll", function () {
+  //checking on scroll if is in vieport
   sections.forEach((element, index) => {
     const activeLink = element.getBoundingClientRect();
     let activeLink2 = navBar.querySelector(`[data-nav=${element.id}]`);
+
+    //if in viewport add or remove active class
     if (activeLink.top <= 50 && activeLink.bottom >= 50) {
       element.classList.add("your-active-class");
       activeLink2.classList.add("active-link");
@@ -81,24 +84,17 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-/**
- * End Main Functions
- * Begin Events
- *
- */
-
-// Build menu
-
-// Scroll to section on link click
-
 // Hide navbar when scrolling
-var prevScrollpos = window.pageYOffset;
+let prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
-  var currentScrollPos = window.pageYOffset;
+  let currentScrollPos = window.pageYOffset;
+
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("navbar__list").style.display = "block";
   } else {
     document.getElementById("navbar__list").style.display = "none";
   }
+
+  //reset again when not scrolling to again check when next scroll is happening
   prevScrollpos = currentScrollPos;
 };
