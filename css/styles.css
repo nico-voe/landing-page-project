@@ -115,6 +115,41 @@ section {
   color: #fff;
 }
 
+/* Form Styles */
+.news__form {
+   display: flex;
+   flex-direction: column;
+   margin-top: 20px;
+}
+
+input[type="text"] {
+  border: 0;
+  outline: 0;
+  padding: 20px 30px;
+  border-radius: 3px;
+  border: 1px solid #8f94a1;
+}
+
+input[type="email"] {
+   border: 0;
+   outline: 0;
+   padding: 20px 30px;
+   border-radius: 3px;
+   border: 1px solid #8f94a1;
+}
+
+.news__btn {
+   border: none;
+   outline: none;
+   background: turquoise;
+   background-color: turquoise;
+   padding: 20px 30px;
+   color: white;
+   border-radius: 3px;
+   cursor: pointer;
+   margin-top: 20px;
+}
+
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */
 .landing__container {
