@@ -103,3 +103,10 @@ window.onscroll = function () {
   //reset again when not scrolling to again check when next scroll is happening
   prevScrollpos = currentScrollPos;
 };
+
+//notification when subscribed
+const subscribeBtn = document.querySelector(".news__btn");
+
+subscribeBtn.addEventListener("click", notify)
+
+function notify() { alert("You subscribed :)") }
