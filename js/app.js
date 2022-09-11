@@ -109,4 +109,11 @@ const subscribeBtn = document.querySelector(".news__btn");
 
 subscribeBtn.addEventListener("click", notify)
 
-function notify() { alert("You subscribed :)") }
+function notify() {
+  const a = document.forms["frm"]["name"].value;
+  console.log("- a", a);
+  const b = document.forms["frm"]["mail"].value;
+
+  if (a == null || a == "", b == null || b == "") { alert("Please fill in your details!") }
+  else { alert("You subscribed :)") }
+}
